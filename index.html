@@ -1,0 +1,314 @@
+<!d<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rootshoot — Fun & Fresh Hair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --turquoise:#2ec4b6;
+      --mint:#a8f0d1;
+      --peach:#ffd2b3;
+      --deep:#0f1720;
+      --muted:#5b6b6b;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.55);
+      --card-shadow: 0 8px 30px rgba(16,24,32,0.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Poppins,system-ui,Segoe UI,Arial,sans-serif;
+      background: var(--mint);
+      color:var(--deep);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.65));
+      border-bottom:1px solid rgba(16,24,32,0.04);
+      padding:10px 6%;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--deep)}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--turquoise),var(--mint));
+      display:grid;place-items:center;color:white;font-weight:700;font-family:Playfair Display,serif;font-size:18px;box-shadow:var(--card-shadow);
+    }
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--deep)}
+
+    /* Hero */
+    .hero{
+      padding:56px 6% 36px;
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;
+    }
+    .hero-card{background:linear-gradient(135deg, rgba(46,196,182,0.08), rgba(168,240,209,0.06));border-radius:18px;padding:36px;box-shadow:var(--card-shadow);}
+    h1.site-title{font-family:Playfair Display,serif;margin:0;font-size:34px;color:var(--deep)}
+    .hero h2{font-family:Playfair Display,serif;margin:0;font-size:28px;color:var(--deep)}
+    .hero p.lead{color:var(--muted);margin-top:8px}
+    .cta-row{margin-top:18px;display:flex;gap:12px;align-items:center}
+    .btn{display:inline-block;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--turquoise),var(--mint));color:#053;box-shadow:0 8px 18px rgba(46,196,182,0.18);}
+    .btn-accent{background:var(--peach);color:var(--deep)}
+
+    /* About */
+    .about-section{padding:22px 6% 40px;display:flex;gap:28px;align-items:center}
+    .about-photo{flex:0 0 300px;border-radius:16px;overflow:hidden;box-shadow:var(--card-shadow);}
+    .about-photo img{display:block;width:100%;height:100%;object-fit:cover}
+    .about-text h3{margin:0 0 10px;font-family:Playfair Display,serif}
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:var(--mint);padding:8px 12px;border-radius:999px;font-weight:600}
+
+    /* Services */
+    .services{padding:32px 6%;}
+    .services h3{font-family:Playfair Display,serif}
+    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+    .service-card{background:white;border-radius:12px;padding:18px;box-shadow:var(--card-shadow);border:1px solid rgba(16,24,32,0.04)}
+    .service-card h4{margin:0 0 8px}
+    .service-card p{margin:0;color:var(--muted)}
+
+    /* Gallery */
+	
+	
+	.gallery-grid img {
+  width: 100%;
+  height: auto;       /* keeps proportions */
+  object-fit: cover;
+  border-radius: 10px;
+}
+    .gallery{padding:32px 6%;}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+    .gallery-grid img{width:100%;height: 240px;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .25s}
+    .gallery-grid img:hover{transform:scale(1.03)}
+
+    /* Testimonials */
+    .testimonials{padding:32px 6%;background:linear-gradient(180deg, rgba(255,210,179,0.08), transparent);border-top:1px dashed rgba(16,24,32,0.03)}
+    .test-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .test-card{background:var(--glass);padding:18px;border-radius:12px}
+    .test-card p{margin:0}
+
+    /* Booking */
+    .booking{padding:32px 6%;}
+    .booking-grid{display:grid;grid-template-columns:1fr 360px;gap:22px}
+    form{background:white;padding:18px;border-radius:12px;box-shadow:var(--card-shadow);display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{padding:12px;border-radius:10px;border:1px solid rgba(16,24,32,0.06);font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid rgba(16,24,32,0.04)}
+    footer a{color:var(--deep);text-decoration:none;font-weight:600}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .about-section{flex-direction:column}
+      .booking-grid{grid-template-columns:1fr}
+      header{padding:10px 5%}
+      nav{display:none}
+    }
+
+    /* tiny helpers */
+    .muted-small{color:var(--muted);font-size:13px}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#">
+      <span class="logo">R</span>
+      <div>
+        <div class="site-title">Rootshoot</div>
+        <div class="muted-small">Playful salon • Edmonton</div>
+      </div>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h1 class="site-title">Good vibes, great hair</h1>
+        <h2>Fresh looks with a playful twist</h2>
+        <p class="lead">Rootshoot is where colour meets personality — custom cuts, bright colourwork and loving care to make you feel like you.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#booking">Book an appointment</a>
+          <a class="btn btn-accent" href="#gallery">See my work</a>
+        </div>
+        <div class="pills" style="margin-top:18px">
+          <span class="pill">Quality work </span>
+          <span class="pill"> Exceptional Customer Service  </span>
+          <span class="pill"> Variety of services </span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
+        <div style="background:linear-gradient(180deg,var(--peach),#fff);padding:18px;border-radius:14px;box-shadow:var(--card-shadow)">
+          <strong>Special Offer</strong>
+          <p class="muted-small" style="margin:6px 0 0">First-time clients get 10% off colour services — mention <em>ROOTPLAY</em>.</p>
+        </div>
+        <div style="background:white;padding:10px;border-radius:14px;display:flex;gap:10px;align-items:center;box-shadow:var(--card-shadow)">
+          <img src="RANVEER.jpg" alt="Ranveer smiling" style="width:72px;height:72px;object-fit:cover;border-radius:10px">
+          <div>
+            <div style="font-weight:700">Ranveer Kaur</div>
+            <div class="muted-small">Hairstylist apprentice • Mc College grad</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-photo">
+        <img src="RANVEER.jpg" alt="Ranveer headshot">
+      </div>
+      <div class="about-text">
+        <h3>About Ranveer</h3>
+        <p>Newly graduated from Mc College with a bright passion for colour and styling. I love helping people feel confident through hair — especially brunettes and lived-in colour. Friendly, determined, and always ready to learn trends. Experienced in providing excellent customer service , ensuring every client feels welcome and valued .Gained extensive hands -on practice in school salon, performing a variety of hair services with professionalism and creativity . Highly motivated to begin an apprenticeship under experienced hairstylists to continue developing my skills-especially in brunettte colouring and enhancing client's confidence through beautiful hair. Dedicated ,adaptable , and eager to learn and grow in the industry . </p>
+		<li  ><strong>Reason For Choosing a Hair Dressing</strong> I always want  to transform lifes with looks effortlessly . Styling  hair as per individual's personality </li>
+		<li/><strong>Personality and Professionalism </strong> Hardworking and passionate , I am a quick learner who thrives on new challenges.My dedication drives me continually grow,adapt and deliver my best in everything I do.
+		<li/><strong>Experience </strong>Hands on experienceof 3years in customer service at Denny's where i provide friendly guest support , handled orders efficientlty and helped positive dinning experience.</li>
+        <p class="muted-small">Hobbies: Family time, Travel, Badminton and Cooking.</p>
+        <div style="margin-top:12px">
+          <a class="btn btn-primary" href="#booking">Book a consultation</a>
+          <a class="btn btn-accent" href="https://www.instagram.com/rootshoot_hair/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h3>Services</h3>
+      <div class="service-grid">
+        <article class="service-card">
+          <h4>Blondes & Brunettes</h4>
+          <p>Highlights, balayage, lived-in tones and seamless blends.</p>
+        </article>
+        <article class="service-card">
+          <h4>Haircut</h4>
+          <p>Precision shapes tailored to your face and lifestyle.</p>
+        </article>
+        <article class="service-card">
+          <h4>Colour</h4>
+          <p>Custom colour that suits your skin tone — from soft pastels to rich brunettes.</p>
+        </article>
+        <article class="service-card">
+          <h4>Texture</h4>
+          <p>Perms and texture services to create long-lasting waves and curls.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h3>Gallery — My favourites</h3>
+      <div class="gallery-grid">
+        <img src="rose pink.jpg" alt="rose pink hair" data-aos"fade-up">
+        <img src="ashy.jpg" alt="ashy brunette look"  data-aos"fade-up" data-aos-delay="100">
+        <img src="platinum.jpg" alt="platinum blonde" data-aos"fade-up" data-aos-delay="200">
+		<img src="brunettes.jpg" alt="brunette transformation"data-aos"fade-up" data-aos-delay="200" >
+		 <img src="BROWNS.jpg" alt="rich brown tones" data-aos"fade-up">
+        <img src="redness.jpg" alt="red hair" data-aos"fade-up" data-aos-delay="100">
+        <img src="best.jpg" alt="salon style"  data-aos"fade-up" data-aos-delay="200">
+        <img src="BROWNIE.jpg" alt="warm brownie tones"data-aos"fade-up" data-aos-delay="200">
+      </div>
+	
+    </section>
+
+    <section class="testimonials">
+      <h3 class="center">Words from clients</h3>
+      <div class="test-list">
+        <div class="test-card">
+          <p>“Had an amazing experience getting my hair cut and coloured! The stylist really took the time to understand what I wanted and offered great suggestions. The cut is perfect — clean, fresh, and just what I hoped for.”</p>
+          <p style="margin-top:8px;font-weight:700">— Mansi Sharma</p>
+        </div>
+        <div class="test-card">
+          <p>“Ranveer was efficient and professional. Really made the service comfortable.”</p>
+          <p style="margin-top:8px;font-weight:700">— Bob Ninja</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="booking">
+      <h3>Book with Ranveer</h3>
+      <div class="booking-grid">
+        <form onsubmit="return handleForm(event)">
+          <label class="muted-small">Full name<input name="name" required placeholder="Your full name"></label>
+          <label class="muted-small">Phone number<input name="phone" required placeholder="eg. 780-555-1234"></label>
+          <label class="muted-small">Email (optional)<input type="email" name="email" placeholder="you@example.com"></label>
+          <label class="muted-small">Service<select name="service">
+            <option>Choose a service</option>
+            <option>Cut</option>
+            <option>Colour</option>
+            <option>Balayage / Highlights</option>
+            <option>Texture / Perm</option>
+          </select></label>
+          <label class="muted-small">Preferred date<input type="date" name="date"></label>
+          <label class="muted-small">Notes<textarea name="notes" placeholder="Tell me about your hair goals"></textarea></label>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn btn-primary" type="submit">Send request</button>
+            <div class="muted-small">Or message on Instagram</div>
+          </div>
+        </form>
+
+        <aside style="padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--mint),#fff);box-shadow:var(--card-shadow);display:flex;flex-direction:column;gap:12px;justify-content:center">
+          <div style="font-weight:700">Need help choosing a service?</div>
+          <div class="muted-small">DM on Instagram or include hair photos in the notes — I’ll reply with a suggested service and pricing estimate.</div>
+          <a class="btn btn-accent" href="https://www.instagram.com/rootshoot_hair/" target="_blank">Message on Instagram</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="documents" style="padding:22px 6%;">
+      <h3>Resume & Letters</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn btn-primary" href="docs/resume.pdf" target="_blank">View Resume</a>
+        <a class="btn btn-accent" href="docs/cover letter.pdf" target="_blank">View Cover Letter</a>
+		<a class="btn btn-accent" href="docs/Reference letter.pdf" target="_blank">View Reference2</a>
+		<a class="btn btn-accent" href="docs/Reference letter 2.pdf" target="_blank">View Reference1</a>
+		<a class="btn btn-accent" href="docs/business.pdf" target="_blank">Business card</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>© Rootshoot Hair — Ranveer Kaur</div>
+    <div>
+      <a href="https://www.instagram.com/rootshoot_hair/" target="_blank">Instagram</a> •
+      <a href="https://www.tiktok.com/@hairsbyveer" target="_blank">TikTok</a>
+    </div>
+  </footer>
+
+  <script>
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const data = Object.fromEntries(new FormData(f).entries());
+      // Build a mailto fallback so the user can send request via email client
+      const subject = encodeURIComponent('Booking request from ' + (data.name || 'client'));
+      let body = '';
+      body += 'Name: ' + (data.name||'') + '\n';
+      body += 'Phone: ' + (data.phone||'') + '\n';
+      body += 'Email: ' + (data.email||'') + '\n';
+      body += 'Service: ' + (data.service||'') + '\n';
+      body += 'Date: ' + (data.date||'') + '\n';
+      body += 'Notes: ' + (data.notes||'') + '\n';
+      const mailto = 'mailto:ranveerfdk1997@gmail.com?subject='+subject+'&body='+encodeURIComponent(body);
+      // open mail client
+      window.location.href = mailto;
+      return false;
+    }
+  </script>
+</body>
+</html>
